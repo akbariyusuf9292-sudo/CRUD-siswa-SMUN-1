@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Admin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>🏫 Admin</h2>
+    <ul>
+      <li class="active">📊 Dashboard</li>
+      <li>👨‍🎓 Data Siswa</li>
+      <li>📚 Nilai</li>
+      <li>⚙️ Settings</li>
+    </ul>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- HEADER -->
+    <div class="topbar">
+      <div class="topbar-text">
+        <h2>SMAN 1 CIKARANG UTARA</h2>
+        <p>Jl. KH. Dewantara No. XX Cikarang Utara</p>
+      </div>
+      <img src="Logosman1cikarangutara.png" class="logo">
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+      <h3>📚 Data Siswa</h3>
+
+      <!-- FORM INPUT -->
+      <div class="form">
+        <input type="text" id="nama" placeholder="Nama siswa">
+        <input type="text" id="kelas" placeholder="Kelas">
+        <button onclick="tambahData()">Tambah</button>
+      </div>
+
+      <!-- SEARCH -->
+      <input 
+        type="text" 
+        id="search" 
+        class="search" 
+        placeholder="🔍 Cari siswa..." 
+        onkeyup="tampilkanData()"
+      >
+
+      <!-- TABLE -->
+      <table>
+        <thead>
+          <tr>
+            <th>Nama</th>
+            <th>Kelas</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
